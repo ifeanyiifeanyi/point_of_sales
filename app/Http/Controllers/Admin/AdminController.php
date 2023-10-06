@@ -51,6 +51,9 @@ class AdminController extends Controller
          return to_route('admin.profile')->with($notification);
         //  dd($user);;
     }
+    public function showPassword(){
+        return view('admin.profile.show');
+    }
 
 
 
