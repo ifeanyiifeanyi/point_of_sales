@@ -111,7 +111,7 @@
                 <a class="nav-link dropdown-toggle nav-user me-0 waves-effect waves-light"
                     data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false"
                     aria-expanded="false">
-                    <img src="{{ asset("") }}admin/assets/images/users/user-1.jpg" alt="user-image" class="rounded-circle">
+                    <img src="{{ !empty(auth()->user()->photo) ? asset(auth()->user()->photo) : asset('default.png') }}" alt="user-image" class="rounded-circle">
                     <span class="pro-user-name ms-1">
                         {{ auth()->user()->username }} <i class="mdi mdi-chevron-down"></i>
                     </span>

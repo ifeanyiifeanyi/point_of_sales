@@ -44,7 +44,11 @@ class AdminController extends Controller
          $user->phone = $request->phone;
          $user->address = $request->address;
          $user->save();
-         return to_route('admin.profile')->with('status', "Profile updated!!");
+         $notification = [
+            'message' => 'Profile updated',
+            'alert-type' => 'success'
+         ];
+         return to_route('admin.profile')->with($notification);
         //  dd($user);;
     }
 
