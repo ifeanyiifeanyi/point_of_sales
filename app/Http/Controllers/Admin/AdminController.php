@@ -9,6 +9,11 @@ use Illuminate\Support\Facades\Auth;
 class AdminController extends Controller
 {
 
+    public function show()
+    {
+        return view('admin.profile.index', ["user" => Auth::user()]);
+    }   
+
 
 
 
