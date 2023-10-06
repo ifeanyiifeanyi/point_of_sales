@@ -27,6 +27,7 @@ Route::prefix("admin")->middleware('auth')->group(function () {
     Route::controller(AdminController::class)->group(function(){
         Route::get('logout', 'logout')->name("admin.logout");
         Route::get('profile', 'show')->name("admin.profile");
+        Route::post('profile/{user:username}', 'update')->name("admin.profile.update");
     });
 });
 

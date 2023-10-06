@@ -57,6 +57,11 @@
                     <div class="page-title-box">
                         <h4 class="page-title">@yield('title')</h4>
                     </div>
+                    @if (session('status'))
+                        <div class="alert alert-success">
+                            {{ session('status') }}
+                        </div>
+                    @endif
                 </div>
             </div>
             <!-- end page title -->
