@@ -25,8 +25,15 @@
     <!-- icons -->
     <link href="{{ asset('') }}admin/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <!-- Head js -->
+
+    <!-- third party css -->
+    <link href="{{ asset('') }}admin/assets/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('') }}admin/assets/libs/datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('') }}admin/assets/libs/datatables.net-buttons-bs5/css/buttons.bootstrap5.min.css" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('') }}admin/assets/libs/datatables.net-select-bs5/css//select.bootstrap5.min.css" rel="stylesheet" type="text/css" />
     <script src="{{ asset('') }}admin/assets/js/head.js"></script>
-    
+
+
  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" >
 
 </head>
@@ -102,6 +109,26 @@
     <!-- Dashboar 1 init js-->
     <script src="{{ asset('') }}admin/assets/js/pages/dashboard-1.init.js"></script>
 
+
+        <!-- third party js -->
+        <script src="{{ asset('') }}admin/assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+        <script src="{{ asset('') }}admin/assets/libs/datatables.net-bs5/js/dataTables.bootstrap5.min.js"></script>
+        <script src="{{ asset('') }}admin/assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+        <script src="{{ asset('') }}admin/assets/libs/datatables.net-responsive-bs5/js/responsive.bootstrap5.min.js"></script>
+        <script src="{{ asset('') }}admin/assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+        <script src="{{ asset('') }}admin/assets/libs/datatables.net-buttons-bs5/js/buttons.bootstrap5.min.js"></script>
+        <script src="{{ asset('') }}admin/assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
+        <script src="{{ asset('') }}admin/assets/libs/datatables.net-buttons/js/buttons.flash.min.js"></script>
+        <script src="{{ asset('') }}admin/assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
+        <script src="{{ asset('') }}admin/assets/libs/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+        <script src="{{ asset('') }}admin/assets/libs/datatables.net-select/js/dataTables.select.min.js"></script>
+        <script src="{{ asset('') }}admin/assets/libs/pdfmake/build/pdfmake.min.js"></script>
+        <script src="{{ asset('') }}admin/assets/libs/pdfmake/build/vfs_fonts.js"></script>
+        <!-- third party js ends -->
+
+        <!-- Datatables init -->
+        <script src="assets/js/pages/datatables.init.js"></script>
+
     <!-- App js-->
     <script src="{{ asset('') }}admin/assets/js/app.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
@@ -113,22 +140,22 @@
            case 'info':
            toastr.info(" {{ Session::get('message') }} ");
            break;
-       
+
            case 'success':
            toastr.success(" {{ Session::get('message') }} ");
            break;
-       
+
            case 'warning':
            toastr.warning(" {{ Session::get('message') }} ");
            break;
-       
+
            case 'error':
            toastr.error(" {{ Session::get('message') }} ");
-           break; 
+           break;
         }
-        @endif 
+        @endif
        </script>
-       
+
     @yield('js')
 
 </body>

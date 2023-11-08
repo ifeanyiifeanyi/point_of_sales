@@ -15,7 +15,7 @@
         <!--- Sidemenu -->
         <div id="sidebar-menu">
 
-            <ul id="side-menu">                
+            <ul id="side-menu">
                 <li>
                     <a href="{{ route('dashboard') }}">
                         <i class="mdi mdi-view-dashboard-outline"></i>
@@ -23,12 +23,29 @@
                     </a>
                 </li>
                 <li>
+                    <a href="#sidebarCrm" data-bs-toggle="collapse" class="" aria-expanded="true">
+                        <i class="mdi mdi-account-multiple-outline"></i>
+                        <span> Employee Manager </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <div class="collapse show" id="sidebarCrm" style="">
+                        <ul class="nav-second-level">
+                            <li>
+                                <a href="{{ route('employees.index') }}">All Employees</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('employees.create') }}">Create Employee</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
                     <a href="apps-calendar.html">
                         <i class="mdi mdi-calendar"></i>
                         <span> Calendar </span>
                     </a>
                 </li>
-               
+
             </ul>
 
         </div>
